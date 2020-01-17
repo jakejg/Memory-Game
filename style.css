@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(194, 133, 194);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container{
+    border-radius: 10px;
+    margin: auto;
+    width:640px;
+    height:640px;
+    display:flex;
+    flex-wrap: wrap;
+
+    
+}
+.card{
+    position: relative;
+    font-size: 20px;
+    width: 23.7%;
+    height: 31%;
+    border-radius: 10px;
+    border: solid rgb(241, 240, 240) 8px;
+    box-sizing: border-box;
+    margin: 4px;
+    
+}
+.front,
+.back
+{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: blue;
+    background: linear-gradient(35deg, rgb(23, 116, 116), rgb(240, 174, 174))
+    
+   
+}
+
+.front{
+ z-index: 2;   
+}
+.back{
+    z-index: 2;
+    display: flex;
+    
+
+}
+
+.button{
+    margin: auto;
+    
+}
+
+.count{
+margin:auto;
+font-size: 4em;
+font-family: 'Baloo Bhai', cursive;
+}
+
+.fas{
+font-size: 5em;
+margin: auto;
+color: white
+}
+
+.newgame
+{
+border-radius: 8px;
+background-color: rgb(181, 187, 181, .85);
+border: none;
+padding: 10px;
+margin: 10px;
+cursor: pointer;
+}
