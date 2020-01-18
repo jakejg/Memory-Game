@@ -1,5 +1,8 @@
 const cards=document.querySelectorAll('.card')
 const counter=document.querySelector('.count')
+const back=document.querySelectorAll('.back')
+const scores=document.querySelector('.score')
+
 let selectedCard=false
 let card1=null
 let card2=null
@@ -8,7 +11,8 @@ let parent2
 let firstClick
 let secondClick
 let count=0
-let fly;
+let score=JSON.parse(localStorage.getItem('score')) || Infinity
+let endCheck=0
 
 let mountain="/image/mountain.jpg"
 let beach="/image/beach.jpg"
@@ -38,7 +42,7 @@ else{
     else{
         e.target.style.zIndex="1";
         }
-//count and display clicks
+//count clicks and update score
     count++;
     counter.innerText=count;
 
@@ -88,8 +92,18 @@ parent1.removeEventListener('click', handleClick)
 parent2.removeEventListener('click', handleClick)
     card1=null
     card2=null
-
+// check for end of game
+for(card of cards) {
+    if (card.lastElementChild.style.zIndex==="1") {
+        endCheck++;
+    }}
+if (endCheck===42 & count<score){
+        score=count
+        scores.innerText=score
+        localStorage.setItem('score', score)
+    }
 }
+
 //no match
 else if(card1 && card2){
     card1=null
@@ -103,7 +117,7 @@ else if(card1 && card2){
 }
     }
         }
-
+       
  //new game button   
 const button=document.querySelector('button')
 button.addEventListener('click', reset)
@@ -119,7 +133,6 @@ i++
     }
 
  // flip cards back over
- const back=document.querySelectorAll('.back')
  for(card of back) {
     card.style.zIndex="2"
  }
@@ -134,6 +147,7 @@ for(card of cards) {
 //reset counter
 count=0
 counter.innerText=count 
+endCheck=0
 }
 
 //shuffle the images array
