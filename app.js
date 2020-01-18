@@ -14,12 +14,12 @@ let count=0
 let score=JSON.parse(localStorage.getItem('score')) || Infinity
 let endCheck=0
 
-let mountain="/image/mountain.jpg"
-let beach="/image/beach.jpg"
-let flower="/image/redflower.jpg"
-let sunrise="/image/laventana.jpg"
-let jungle= "/image/hana.jpg"
-let desert= "/image/desert.jpg"
+let mountain="./image/mountain.jpg"
+let beach="./image/beach.jpg"
+let flower="./image/redflower.jpg"
+let sunrise="./image/laventana.jpg"
+let jungle= "./image/hana.jpg"
+let desert= "./image/desert.jpg"
 
 let imagesArray=[mountain,beach,flower,sunrise,jungle,desert,mountain,beach,flower,sunrise,jungle,desert]
 
@@ -94,6 +94,7 @@ parent2.removeEventListener('click', handleClick)
     card1=null
     card2=null
 // check for end of game
+
 for(card of cards) {
     if (card.lastElementChild.style.zIndex==="1") {
         endCheck++;
