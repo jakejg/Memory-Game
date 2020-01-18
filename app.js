@@ -23,7 +23,8 @@ let desert= "/image/desert.jpg"
 
 let imagesArray=[mountain,beach,flower,sunrise,jungle,desert,mountain,beach,flower,sunrise,jungle,desert]
 
-
+if (score<Infinity){
+    scores.innerText=`Low score: ${score}`}
 
     //add event listener to each card
 for(card of cards) { 
@@ -99,7 +100,7 @@ for(card of cards) {
     }}
 if (endCheck===42 & count<score){
         score=count
-        scores.innerText=score
+        scores.innerText=`Low score: ${score}`
         localStorage.setItem('score', score)
     }
 }
