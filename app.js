@@ -45,7 +45,7 @@ else{
         }
 //count clicks and update score
     count++;
-    counter.innerText=count;
+    counter.innerText=`Clicks: ${count}`;
 
 
 //first click
@@ -147,7 +147,7 @@ for(card of cards) {
 
 //reset counter
 count=0
-counter.innerText=count 
+counter.innerText=`Clicks: ${count}` 
 endCheck=0
 }
 
