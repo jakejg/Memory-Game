@@ -8,7 +8,7 @@ let parent2
 let firstClick
 let secondClick
 let count=0
-
+let fly;
 
 let mountain="/image/mountain.jpg"
 let beach="/image/beach.jpg"
